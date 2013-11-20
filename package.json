@@ -1,6 +1,6 @@
 {
   "name": "wmap",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "watchable map",
   "main": "index.js",
   "scripts": {
