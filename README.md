@@ -13,6 +13,21 @@ Create:
     var wmap = require('wmap');
     var myMap = wmap();
 
+Set some keys:
+
+    myMap.set('foo', 10);
+    myMap.set('bar', 15);
+
+Watch a bunch of keys for changes:
+
+    var unsubscribe = myMap.watch(['foo', 'bar', 'baz'], function(key, oldValue, newValue) {
+        // ...
+    });
+
+Cancel the subscription:
+
+    unsubscribe();
+
 ## API
 
 ### `map.get(key)`
