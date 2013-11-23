@@ -24,6 +24,9 @@ WMap.prototype.watch = function(keys, cb) {
     if (!Array.isArray(keys))
         keys = [keys];
 
+    if (keys.length === 0)
+        return function() {};
+
     var ws = this._watchers;
 
     keys.forEach(function(k) {
